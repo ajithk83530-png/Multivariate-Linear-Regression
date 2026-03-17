@@ -5,23 +5,32 @@ To write a python program to implement multivariate linear regression and predic
 1.	Hardware – PCs
 2.	Anaconda – Python 3.7 Installation / Moodle-Code Runner
 ## Algorithm:
-### Step1
-<br>
+Step1
+Import and Load Data
 
-### Step2
-<br>
+ Step2
+Select Input and Output
 
-### Step3
-<br>
-
-### Step4
-<br>
-
-### Step5
-<br>
+ Step3
+Train the Model
+ Step4
+Display Results & Predict
 
 ## Program:
-```
+```python
+import pandas as pd
+from sklearn import linear_model
+df = pd.read_csv("carsemission.csv")
+X = df[['Weight', 'Volume']]
+y = df['CO2']
+regr = linear_model.LinearRegression()
+regr.fit(X, y)
+print('Coefficients:', regr.coef_)
+print('Intercept:', regr.intercept_)
+input_data = pd.DataFrame({'Weight': [3300], 'Volume': [1300]})
+predictedCO2 = regr.predict(input_data)
+print('Predicted CO2 for the corresponding weight and volume:', predictedCO2)
+
 
 
 
@@ -30,6 +39,10 @@ To write a python program to implement multivariate linear regression and predic
 
 ```
 ## Output:
+<img width="918" height="279" alt="Screenshot 2026-03-17 185218" src="https://github.com/user-attachments/assets/7f7d9026-6344-431d-b002-409b9f8999b3" />
+
+<img width="701" height="79" alt="Screenshot 2026-03-17 185228" src="https://github.com/user-attachments/assets/36c6bace-3b23-4c76-af5d-154bb7f86b4a" />
+
 
 ### Insert your output
 
